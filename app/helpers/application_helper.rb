@@ -10,5 +10,9 @@ module ApplicationHelper
       content_tag(:span, options[:false_text], :class => 'status false')
     end
   end
+
+  def error_messages_for obj
+  	render partial: 'application/error_messages', locals: { object: obj}
+  end
   
 end
