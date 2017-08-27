@@ -1,5 +1,6 @@
 class SectionsController < ApplicationController
 
+  before_action :confirm_logged_in
   before_action :set_section, only: [:show, :update, :delete, :destroy, :edit]
 
   def index
